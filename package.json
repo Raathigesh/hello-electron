@@ -1,0 +1,14 @@
+{
+  "name": "electrontest",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "electron-packager": "^8.7.2"
+  },
+  "scripts": {
+    "start": "electron .",
+    "app": "electron-packager . demo"
+  }
+}

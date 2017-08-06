@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        window.onload = () => {
+            const fs = require('fs');
+            const p = document.createElement('p');
+            p.textContent = fs.readFileSync('cats.txt');
+            document.body.appendChild(p);
+
+            const electron = require('electron');
+            electron.ipcRenderer.sendSync('hello', 'Hello from the renderer side')
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Electron is awesome.</h1>
+</body>
+
+</html>
