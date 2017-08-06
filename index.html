@@ -7,9 +7,6 @@
             const p = document.createElement('p');
             p.textContent = fs.readFileSync('cats.txt');
             document.body.appendChild(p);
-
-            const electron = require('electron');
-            electron.ipcRenderer.sendSync('hello', 'Hello from the renderer side')
         }
     </script>
 </head>

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow } = require("electron");
 
 let mainWindow = null;
 
@@ -8,8 +8,4 @@ app.on("ready", () => {
     height: 400
   });
   mainWindow.loadURL("file://" + __dirname + "/index.html");
-
-  ipcMain.on("hello", (event, arg) => {
-    console.log(arg);
-  });
 });
